@@ -17,4 +17,8 @@ recursive call algorithm. eventually resolves itself down before before returnin
 
 ## Exercise II
 
+This sounds like binary search. Split the floor in half, throw, check to see if it breaks. If it breaks check the middle half of the lower end if it doesnt check the upper half. 
+
+The runtime complexity is O(logn)
+
 
