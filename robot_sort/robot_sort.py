@@ -95,15 +95,16 @@ class SortingRobot:
     def sort(self):
         """
         Sort the robot's list.
-        """
+
         #The none check doesn't even really matter considering
         #all the test cases have values in them. I guess this could refer to the end
-        #of the list but thats what checking the move from left to right is. 
+        #of the list but thats what checking the move from left to right is.
 
         #Light needs to be turned on to make sure
         #it can acutally hold items. Hence this light
         #even being part of this challenge and we cant
         #store items.
+        """
         self.set_light_on()
         while self.light_is_on():
             self.set_light_off()
