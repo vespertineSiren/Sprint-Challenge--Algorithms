@@ -96,8 +96,43 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+
+        #Light needs to be turned on to make sure
+        #it can acutally hold items. Hence this light
+        #even being part of this challenge and we cant
+        #store items.
+        self.set_light_on()
+        while self.light_is_on():
+            self.set_light_off()
+            self.swap_item()
+
+            #Perpetually moving left to right across the list (at least until complete)
+            #So there are two while statements below to indicate that.
+            #Swaps are done in this way to from least to greatest.
+            while self.can_move_right():
+                self.move_right()
+                if self.compare_item() == -1:
+                    self.swap_item()
+                elif self.compare_item() == 1:
+                    if not self.light_is_on():
+                        self.set_light_on()
+
+            if self.compare_item() == 1:
+                self.swap_item()
+
+            while self.can_move_left():
+                self.move_left()
+                if self.compare_item() == 1:
+                    self.swap_item()
+                elif self.compare_item() == -1:
+                    if not self.light_is_on():
+                        self.set_light_on()
+
+            if not self.can_move_left():
+                self.swap_item()
+
+
+
 
 
 if __name__ == "__main__":
