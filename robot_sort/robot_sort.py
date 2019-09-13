@@ -97,7 +97,8 @@ class SortingRobot:
         Sort the robot's list.
         """
         #The none check doesn't even really matter considering
-        #all the test cases have values in them. 
+        #all the test cases have values in them. I guess this could refer to the end
+        #of the list but thats what checking the move from left to right is. 
 
         #Light needs to be turned on to make sure
         #it can acutally hold items. Hence this light
