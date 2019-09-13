@@ -96,6 +96,8 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
+        #The none check doesn't even really matter considering
+        #all the test cases have values in them. 
 
         #Light needs to be turned on to make sure
         #it can acutally hold items. Hence this light
@@ -109,6 +111,7 @@ class SortingRobot:
             #Perpetually moving left to right across the list (at least until complete)
             #So there are two while statements below to indicate that.
             #Swaps are done in this way to from least to greatest.
+            #Kinda wonder if the 0 check is even necessary
             while self.can_move_right():
                 self.move_right()
                 if self.compare_item() == -1:
